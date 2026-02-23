@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   },
 ],
   {
-    basename:"calendar",
+    basename:"/calendar",
   } 
 );
 

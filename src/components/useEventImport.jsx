@@ -9,6 +9,11 @@ export default function useEventImport () {
         fetch("https://www.thesportsdb.com/api/v1/json/123/eventsseason.php?id=4714&s=2026")
             .then(res => res.json())
             .then(data => {
+                if (!data.events) {
+                    console.warn("NO DATA RECEIVED FROM API");
+                    setEvents([]);
+                    return;
+                }
                 const mapped = data.events.map( item => ({
                     id: item.idEvent,
                     title: item.strEvent,
