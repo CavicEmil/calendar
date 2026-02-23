@@ -20,7 +20,10 @@ export default function Favourite({teams}) {
         <section className="favourite">
             <span className="favouritedisplay">
                 You are rooting for
-                <img className="fbadge" src={favourite.teamBadge} />
+                { favourite ?
+                    <img className="fbadge" src={favourite.teamBadge} />
+                    : "-"
+                }
             </span>
             <span className="fselect">
                 <label for="fteam">Your Valentine:</label>
