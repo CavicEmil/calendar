@@ -27,7 +27,6 @@ export default function Favourite({teams}) {
                 <select id="fteam" value={favourite?.id || ''} onChange={handleFavourite}>             
                     {teams.map(team => (
                         <option key={team.id} value={team.id}>
-                            {/* <img src={team.teamBadge} /> */}
                             {team.teamName}
                         </option>
                     ))} 
